@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Career.css"; // Add this line to import the CSS
+import "./career.css"; // Add this line to import the CSS
 
 const Career = () => {
   const [activeTab, setActiveTab] = useState("explore");

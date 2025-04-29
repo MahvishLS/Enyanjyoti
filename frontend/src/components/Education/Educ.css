@@ -1,0 +1,141 @@
+/* Main Page Styling */
+.educ-page {
+    padding: 80px 20px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .educ-hero {
+    border-radius: 8px;
+    margin-bottom: 40px;
+  }
+  
+  .educ-quote {
+    font-size: 1.8rem;
+    font-weight: 500;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.4;
+  }
+  
+  /* Cards Container */
+  .educ-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  /* Individual Card Styling */
+  .educ-card {
+    border-radius: 8px !important;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .educ-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  }
+  
+  .educ-card-img-col {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+  }
+  
+  .educ-card-image {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    padding: 20px;
+  }
+  
+  .educ-card-body {
+    padding: 25px;
+  }
+  
+  .educ-card-header {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+  
+  .educ-card-header h5 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+  }
+  
+  .educ-card-body p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 1rem;
+  }
+  
+  /* Button Styling */
+  .educ-btn {
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 150px;
+  }
+  
+  .educ-btn:hover {
+    background-color: #3367d6;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .educ-page {
+      padding: 60px 15px 30px;
+    }
+    
+    .educ-quote {
+      font-size: 1.4rem;
+    }
+    
+    .educ-card {
+      flex-direction: column;
+    }
+    
+    .educ-card-img-col {
+      height: 200px;
+    }
+    
+    .educ-card-image {
+      object-fit: contain;
+      padding: 15px;
+    }
+    
+    .educ-card-body {
+      padding: 20px;
+    }
+    
+    .educ-btn {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .educ-quote {
+      font-size: 1.2rem;
+    }
+    
+    .educ-card-header h5 {
+      font-size: 1.2rem;
+    }
+    
+    .educ-card-body p {
+      font-size: 0.9rem;
+    }
+  }

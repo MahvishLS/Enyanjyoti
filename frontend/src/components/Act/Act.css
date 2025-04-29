@@ -1,0 +1,156 @@
+/* Main Page Styling */
+.act-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .act-hero {
+    padding: 120px 20px;
+    margin-bottom: 40px;
+  }
+  
+  .act-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  }
+  
+  .act-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Cards Container */
+  .act-container {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  /* Card Styling */
+  .act-card {
+    border-radius: 8px !important;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    border: none;
+  }
+  
+  .act-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .act-card-img-col {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 15px;
+  }
+  
+  .act-card-image {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    max-height: 200px;
+  }
+  
+  .act-card-body {
+    padding: 25px;
+  }
+  
+  .act-card-header {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+  
+  .act-card-header h5 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+  }
+  
+  .act-card-body p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  /* Button Styling */
+  .act-btn {
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 150px;
+  }
+  
+  .act-btn:hover {
+    background-color: #3367d6;
+  }
+  
+  /* Footer Styling */
+  .act-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .act-hero {
+      padding: 80px 20px;
+    }
+    
+    .act-title {
+      font-size: 2rem;
+    }
+    
+    .act-card {
+      flex-direction: column;
+    }
+    
+    .act-card-img-col {
+      height: 200px;
+    }
+    
+    .act-card-image {
+      object-fit: contain;
+    }
+    
+    .act-btn {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .act-title {
+      font-size: 1.8rem;
+    }
+    
+    .act-subtitle {
+      font-size: 1rem;
+    }
+    
+    .act-card-header h5 {
+      font-size: 1.2rem;
+    }
+    
+    .act-card-body {
+      padding: 20px;
+    }
+  }

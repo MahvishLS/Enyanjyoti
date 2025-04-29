@@ -19,6 +19,7 @@ import Contact from "./pages/Contact/Contact.js";
 import Error from "./pages/Error/index.js";
 import ContributorsPage from "./pages/Contributor/ContributorsPage.jsx";
 import Preloader from "./pages/Preloader/Preloader.jsx";
+import Career from "./pages/career/career.js"
 
 function App() {
   const location = useLocation();
@@ -54,6 +55,7 @@ function App() {
               <Route path="/act" element={<Act />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
+              <Route path="/career" element={<Career/>} />
               <Route path="/forgot-password" element={<ForgotPassword />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/page-not-found" element={<Error />} />

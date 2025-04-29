@@ -36,7 +36,7 @@ export default function Hom() {
         "Get complete understanding of concepts. Adapt life skills. Gain general knowledge and enjoy activity-based learning.",
       image: "./images/e3.png",
       action: "Learn Now",
-      link: "https://wikiedu.org/"
+      link: "/educ"  // Changed to internal route
     },
     {
       title: "Career",
@@ -44,7 +44,7 @@ export default function Hom() {
         "Explore career opportunities and make yourself ready for employment in various fields. Learn how to build your own startup and become a successful entrepreneur.",
       image: "./images/e4.png",
       action: "Explore Now",
-      link: "https://en.wikipedia.org/wiki/Career"
+      link: "/career"  // Changed to internal route
     },
     {
       title: "Loans and Grants",
@@ -52,7 +52,7 @@ export default function Hom() {
         "Complete information about loans, grants, and scholarships. Simple procedure and steps to apply easily.",
       image: "./images/e5.png",
       action: "Check Now",
-      link: "https://enyanjyoti.vercel.app/loan"
+      link: "/loan"  // Changed to internal route
     },
   ];
 
@@ -78,7 +78,7 @@ export default function Hom() {
               autoplay
             ></dotlottie-player>
           </div>
-          <div className="intro-text" >
+          <div className="intro-text">
             <h1 className="title">
               Dive into the World of Knowledge, Skills and Wisdom
             </h1>
@@ -86,7 +86,7 @@ export default function Hom() {
               Empower yourself with our comprehensive learning platform
             </p>
             <div className="button-group">
-              <Link to="/Signup" className="btn-default">
+              <Link to="/signup" className="btn-default">
                 Sign Up
               </Link>
               <Link to="/login" className="btn-outline">
@@ -103,10 +103,15 @@ export default function Hom() {
                 <h2 className="card-title">{item.title}</h2>
               </div>
               <div className="card-content">
-                <img src={item.image} alt={item.title} className="card-image" style={{ objectFit: "cover" }} />
+                <img 
+                  src={item.image} 
+                  alt={item.title} 
+                  className="card-image" 
+                  style={{ objectFit: "cover" }} 
+                />
                 <p className="card-description">{item.description}</p>
-                <Link to={item.title === "Loans and Grants" ? "/Loan" : "#"}>
-                  <button className="btn-default card-button"><a href={`${item.link}`}> {item.action}</a> </button>
+                <Link to={item.link} className="btn-default card-button">
+                  {item.action}
                 </Link>
               </div>
             </div>

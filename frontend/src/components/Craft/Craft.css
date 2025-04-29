@@ -1,0 +1,123 @@
+/* Main Page Layout */
+.craft-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+  }
+  
+  /* Hero Section Styling */
+  .craft-hero-section {
+    padding: 80px 0;
+    margin-bottom: 40px;
+    background-color: #f0f0f0; /* Simple background color instead of image */
+  }
+  
+  .craft-hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+  
+  .craft-hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .craft-hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    color: #666;
+  }
+  
+  /* Projects Grid Styling */
+  .craft-projects-container {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+  }
+  
+  .craft-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+  }
+  
+  .craft-project {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .craft-project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+  
+  .craft-project-spacer {
+    height: 20px;
+  }
+  
+  .craft-project-header {
+    padding: 15px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .craft-project-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  
+  .craft-video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .craft-video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .craft-hero-section {
+      padding: 60px 0;
+    }
+    
+    .craft-hero-content h2 {
+      font-size: 2rem;
+    }
+    
+    .craft-hero-content p {
+      font-size: 1rem;
+    }
+    
+    .craft-projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .craft-hero-section {
+      padding: 40px 0;
+    }
+    
+    .craft-hero-content h2 {
+      font-size: 1.8rem;
+    }
+    
+    .craft-project-header h3 {
+      font-size: 1.1rem;
+    }
+  }

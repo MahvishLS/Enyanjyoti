@@ -1,5 +1,5 @@
-import React from 'react'
-import {useNavigate } from 'react-router-dom'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   MDBCard,
   MDBCardTitle,
@@ -9,115 +9,99 @@ import {
   MDBRow,
   MDBCol
 } from 'mdb-react-ui-kit';
-function Act ()  {
-    
+import './Act.css'; // Create this CSS file for custom styles
+
+function Act() {
   const navigate = useNavigate();
-  const [goToSef, setGoToQuiz] = React.useState(false);
-  const [goToAct, setGoToCraft] = React.useState(false);
 
-  if (goToSef) {
-    return navigate('/quiz');
-  }
+  const handleNavigation = (path) => {
+    navigate(path);
+  };
 
-  if (goToAct) {
-    return navigate('/craft');
-  }
-    return (
+  return (
+    <div className="act-page">
+      {/* Hero Section */}
+      <div className="act-hero" style={{ 
+        backgroundImage: 'linear-gradient(rgba(0,0,0,0.2), url("./images/e21.jpg")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        padding: '100px 20px',
+        textAlign: 'center',
+        color: 'white'
+      }}>
+        <h1 className="act-title">Activity Based Learning</h1>
+        <p className="act-subtitle">Learn by doing with interactive activities</p>
+      </div>
 
-      
-    <div style={{ backgroundImage: 'url("./images/e21.jpg")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-    <main>
-  
-   
-  <section  >
-       <div class="py-5">
-        <div className="container">
-     <div className="col">
-     <h1 align="center" >Activity Based Learning</h1>
-     <div class="py-5">
+      {/* Main Content */}
+      <div className="act-container">
+        {/* Quiz Card */}
+        <MDBCard className="act-card">
+          <MDBRow className='g-0'>
+            <MDBCol md='4' className="act-card-img-col">
+              <MDBCardImage 
+                src='./images/e16.png' 
+                alt='General Knowledge Quiz' 
+                fluid 
+                className="act-card-image"
+              />
+            </MDBCol>
+            <MDBCol md='8'>
+              <MDBCardBody className="act-card-body">
+                <div className="act-card-header">
+                  <MDBCardTitle>General Knowledge Quiz</MDBCardTitle>
+                </div>
+                <MDBCardText>
+                  Solve interesting quizzes, test your knowledge and enjoy learning.
+                  Challenge yourself with our curated collection of fun and educational quizzes.
+                </MDBCardText>
+                <button 
+                  className="act-btn"
+                  onClick={() => handleNavigation('/quiz')}
+                >
+                  Test Now
+                </button>
+              </MDBCardBody>
+            </MDBCol>
+          </MDBRow>
+        </MDBCard>
+
+        {/* Craft Card */}
+        <MDBCard className="act-card">
+          <MDBRow className='g-0'>
+            <MDBCol md='4' className="act-card-img-col">
+              <MDBCardImage 
+                src='./images/e15.png' 
+                alt='Art and Craft' 
+                fluid 
+                className="act-card-image"
+              />
+            </MDBCol>
+            <MDBCol md='8'>
+              <MDBCardBody className="act-card-body">
+                <div className="act-card-header">
+                  <MDBCardTitle>Art and Craft</MDBCardTitle>
+                </div>
+                <MDBCardText>
+                  Outshine with your creativity and learn art and craft from best out of waste.
+                  Discover innovative ways to create beautiful objects from everyday materials.
+                </MDBCardText>
+                <button 
+                  className="act-btn"
+                  onClick={() => handleNavigation('/craft')}
+                >
+                  Explore Now
+                </button>
+              </MDBCardBody>
+            </MDBCol>
+          </MDBRow>
+        </MDBCard>
+      </div>
+
+      {/* Footer - Remove if already in App.js */}
      
-       </div>
-       
-       <div>
-  <MDBCard style={{ maxWidth: '700px', margin: 'auto', marginBottom: '200px', borderRadius : '5px',borderColor : 'black', backgroundColor :'#009688',}}>
-    <MDBRow className='g-0'>
-      <MDBCol md='4'>
-        <MDBCardImage src='./images/e16.png' alt='...' fluid style={{ height: '100%',width :'auto'}}/>
-      </MDBCol>
-      <MDBCol md='8'>
-        <MDBCardBody>
-        <div class="card-header" style={{backgroundColor : 'lightblue'}}>
-          <MDBCardTitle className='card-title' align='center' style={{fontWeight :'bold' }} >General Knowledge Quiz</MDBCardTitle>
-          </div>
-          <div class="py-5">
-          <MDBCardText className='card-text' style={{color :'white' }} >
-           Solve interesting quizes, test your knowledge and enjoy learning.
-          </MDBCardText>
-          </div>
-          <div class="py-2">
-          <button type="button" class="btn btn-primary" onClick ={() =>{ setGoToQuiz(true);}}>Test Now</button>
-          </div>
-         
-        </MDBCardBody>
-      </MDBCol>
-    </MDBRow>
-  </MDBCard>
-
-
-
- 
-</div>
-<div>
-  <MDBCard style={{ maxWidth: '700px', margin: 'auto', marginBottom: '200px', borderRadius : '5px',borderColor : 'black', backgroundColor :'#00897B'}}>
-    <MDBRow className='g-0'>
-      <MDBCol md='4'>
-        <MDBCardImage src='./images/e15.png' alt='...' fluid style={{ height: '100%',width :'auto'}} />
-      </MDBCol>
-      <MDBCol md='8'>
-        <MDBCardBody>
-        <div class="card-header" style={{backgroundColor : 'lightblue'}}>
-          <MDBCardTitle className='card-title' align='center' style={{fontcolor :'white',fontWeight :'bold' }}>Art and Craft </MDBCardTitle>
-          </div>
-          <div class="py-5">
-          <MDBCardText className='card-text' style={{color :'white' }}>
-          Outshine with your creativity and learn arand craft frrom best out of waste.
-          </MDBCardText>
-          </div>
-          <div class="py-2">
-          <button type="button" class="btn btn-primary"onClick ={() =>{ setGoToCraft(true);}}>Explore Now</button>
-          </div>
-          <div>
-            
-          </div>
-        </MDBCardBody>
-      </MDBCol>
-    </MDBRow>
-  </MDBCard>
-
-
-
- 
-</div>
-
- 
-
-
-   </div>
-   </div>
-   </div>
-   </section>
-   
-   
-   </main>
-
-   <footer style={{ backgroundColor: '#333', color: '#fff', padding: '20px', textAlign: 'center' }}>
-      <p>&copy; Edu@enyanjyoti. All rights reserved.</p>
-    </footer>
-         </div>
-    
-
-    
+    </div>
   );
-};
+}
 
 export default Act;
