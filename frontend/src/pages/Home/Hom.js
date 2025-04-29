@@ -36,7 +36,7 @@ export default function Hom() {
         "Get complete understanding of concepts. Adapt life skills. Gain general knowledge and enjoy activity-based learning.",
       image: "./images/e3.png",
       action: "Learn Now",
-      link: "/educ"  // Changed to internal route
+      link: "/educ"
     },
     {
       title: "Career",
@@ -44,7 +44,7 @@ export default function Hom() {
         "Explore career opportunities and make yourself ready for employment in various fields. Learn how to build your own startup and become a successful entrepreneur.",
       image: "./images/e4.png",
       action: "Explore Now",
-      link: "/career"  // Changed to internal route
+      link: "/career"
     },
     {
       title: "Loans and Grants",
@@ -52,7 +52,7 @@ export default function Hom() {
         "Complete information about loans, grants, and scholarships. Simple procedure and steps to apply easily.",
       image: "./images/e5.png",
       action: "Check Now",
-      link: "/loan"  // Changed to internal route
+      link: "/loan"
     },
   ];
 
@@ -86,7 +86,7 @@ export default function Hom() {
               Empower yourself with our comprehensive learning platform
             </p>
             <div className="button-group">
-              <Link to="/signup" className="btn-default">
+              <Link to="/signup" className="btn-default" id="sign-up-btn">
                 Sign Up
               </Link>
               <Link to="/login" className="btn-outline">
