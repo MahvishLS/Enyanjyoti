@@ -9,6 +9,7 @@ const navItems = [
   { path: "/about", label: "About Us" },
   { path: "/contact", label: "Contact Us" },
   
+  
 ];
 
 function Navbar() {
