@@ -150,9 +150,9 @@ const Loan = () => {
                 {calculationResult && (
                     <div className="calculator-result">
                         <h3>Loan Summary:</h3>
-                        <p>{calculationResult.frequency} Payment: ${calculationResult.paymentPerPeriod}</p>
-                        <p>Total Payment: ${calculationResult.totalPayment}</p>
-                        <p>Total Interest: ${calculationResult.totalInterest}</p>
+                        <p>{calculationResult.frequency} Payment: Rs{calculationResult.paymentPerPeriod}</p>
+                        <p>Total Payment: Rs{calculationResult.totalPayment}</p>
+                        <p>Total Interest: Rs{calculationResult.totalInterest}</p>
                     </div>
                 )}
             </section>
